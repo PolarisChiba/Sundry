@@ -1,0 +1,64 @@
+%!TEX root = problem.en.tex
+\gdef\thisproblemauthor{}
+\gdef\thisproblemdeveloper{}
+\gdef\thisproblemorigin{}
+\begin{problem}{Leadership team}
+{}{}
+{please refer to DOM Judge}
+{please refer to DOM Judge}
+{}
+
+People love each other and everyone is equal. At least, this is the case in a perfect world. However, it doesn't hold in most cases in the real world.
+
+For any two people, they may like each other as in the perfect case, hate each other, has nothing to do with each other, or one likes the other but the other hates them, and so forth.
+
+That is, the relationships between any two people may be one-way and either positive or negative.
+
+On the other hand, people are not equal in many cases. For example, one may have more influence or right over others.
+
+In this problem, we will research this social phenomenon among $n$ people.
+
+First, we collect the relationships between any two people. Well, to keep our mental health, we only focus on positive relationship, namely "liking".
+
+For any two people $A$ and $B$, if there are some people $C_1, C_2,\cdots, C_m$ such that $A$ likes $C_1$, $C_i$ likes $C_{i+1}$ for $i=1, 2\cdots, m - 1$, and $C_m$ likes $B$, then we say $A$ has a good relationship with $B$.
+
+Note that "good relationship" is also one-way.
+
+A group of people is defined as a set where any two members have a good relationship with each other, and adding any other person to the set would cause this condition to fail.
+
+For any people, we calculate its influence over other people by evaluating their performance on their social media.
+
+As a result, the $i$-th person is assigned an influence value denoted by $w_i$.
+
+The influence of a group is the sum of the influence of its members.
+
+The group with the highest total influence is referred to as the "leadership team".
+
+Your task is to find the influence of the leadreship team.
+
+\InputFile
+
+The first line of the input contains two integers $n$ and $m$ --- the number of people and the number of "liking" relationships.
+
+The second line of the input contains $n$ integers $w_1, w_2\cdots, w_n$ --- the influence of each person.
+
+Each the following $m$ lines contains two integers $u_i, v_i$ --- $u_i$-th person likes $v_i$-th person.
+
+\begin{itemize}
+    \item $1 \leq n \leq 10^5$
+    \item $1 \leq m \leq 2\times 10^5$
+    \item $1 \leq w_i \leq 10^9$
+    \item $1 \leq u_i, v_i \leq n$
+  \end{itemize}
+
+\OutputFile
+
+The output should contains an integer representing the influence of the leadership team.
+
+\Examples
+
+\begin{example}
+\exmpfile{./sample/0-01.in}{./sample/0-01.out}%
+\end{example}
+
+\end{problem}

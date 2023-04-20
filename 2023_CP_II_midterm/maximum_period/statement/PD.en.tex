@@ -1,0 +1,44 @@
+%!TEX root = problem.en.tex
+\gdef\thisproblemauthor{}
+\gdef\thisproblemdeveloper{}
+\gdef\thisproblemorigin{}
+\begin{problem}{Maximum period}
+{}{}
+{please refer to DOM Judge}
+{please refer to DOM Judge}
+{}
+
+A period of a string is a prefix that can be used to generate the whole string by repeating the prefix. The last repetition may be partial. For example, the periods of $abcabca$ are $abc$, $abcabc$ and $abcabca$.
+
+Given a weighted string $S$ with size $n$, the weight of the $i$-th character of which is $w_i$.
+
+The weight of substring $S[L\cdots R]$ is $\sum_{i=L}^{R} w_i$.
+
+Among all period of $S$, we call the one with the maximum weight "maximum period".
+
+Your task is to find the weight of the maximum period of $S$.
+
+\InputFile
+The first line of the input contains an integers $n$ --- the size of $S$.
+
+The second line of the input contains a string $S$ with size $n$.
+
+The third line of the input contains $n$ integers $w_1, w_2,\cdots, w_n$ --- the weight of each character of $S$.
+
+\begin{itemize}
+  \item $1 \leq n \leq 10^6$
+  \item $|w_i| \leq 1000$
+\end{itemize}
+
+\OutputFile
+
+You should print an integer which represents the weight of the maximum period of $S$.
+
+\Examples
+
+\begin{example}
+\exmpfile{./sample/0-01.in}{./sample/0-01.out}%
+\exmpfile{./sample/0-02.in}{./sample/0-02.out}%
+\end{example}
+
+\end{problem}

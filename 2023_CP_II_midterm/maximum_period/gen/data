@@ -1,0 +1,20 @@
+@subtask samples
+copy ../public/examples/01.in
+copy ../public/examples/02.in
+
+@subtask full
+@include samples
+manual manual-1.in
+manual manual-2.in
+manual manual-3.in
+manual manual-4.in
+manual manual-5.in
+manual manual-6.in
+manual manual-7.in
+manual manual-8.in
+manual manual-9.in
+manual manual-10.in
+manual manual-11.in
+manual manual-12.in
+manual manual-13.in
+manual manual-14.in
