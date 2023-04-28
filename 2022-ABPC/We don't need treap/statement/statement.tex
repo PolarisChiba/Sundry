@@ -1,0 +1,63 @@
+% Name
+
+We don't need treap
+
+---
+
+% Legend
+
+\begin{center}
+    \textit{Treap=tree+heap}
+    \end{center}
+    
+    Given a sequence $S = s_1, s_2, \cdots, s_N$ and $s_i = (a_i, b_i)$.
+    
+    For every $i\neq j$, $a_i\neq a_j$.
+    
+    You are given the following operations:
+    \begin{itemize}
+        \item $1$ $L$ $R$: reverse the subsequence $s_L, s_{L+1}, \cdots, s_{R}$ to $s_{R}, s_{R-1}, \cdots, s_L$
+        \item $2$ $u$ $v$ $t$: for $i = 0, 1, \cdots, t-1$, swap $s_{u+i}$ and $s_{v+i}$
+        \item $3$ $L$ $R$ $x$: for $i = L, L+1, \cdots, R$, assign $b_i + x$ to $b_i$
+    \end{itemize}
+    
+    At the end, you will be given a number $Y$, you have to find the value of $b_i$ such that $a_i = Y$.
+
+---
+
+% Input format
+
+The first line of the input contains an integer $T$($1\leq T\leq 10^5$) --- the number of testcases.
+
+The first line of each testcase contains two integers $N$($1\leq N\leq 10^5$) $Q$($1\leq Q\leq 10^5$) --- the length of $S$ and the number of operations.
+
+The second line of each testcase contains $N$ integers, $a_1, a_2, \cdots, a_N$, ($1\leq a_i\leq N$).
+
+The third line of each testcase contains $N$ integers, $b_1, b_2, \cdots, b_N$, ($1\leq b_i\leq 10^9$).
+
+Each of the next $Q$ lines contains one of the following operations:
+\begin{itemize}
+    \item $1$ $L$ $R$ ($1\leq L \leq R \leq N$)
+    \item $2$ $u$ $v$ $t$ ($1\leq u\leq u+t-1 < v\leq v+t-1\leq N$)
+    \item $3$ $L$ $R$ $x$ ($1\leq L \leq R \leq N$, $1\leq x\leq 10^9$)
+\end{itemize}
+
+The last line of each testcase contains an integer $Y$($1\leq Y\leq N$), the number your are queried.
+
+It is guaranteed that the total sum of $N$ doesn't exceed $10^5$.
+
+It is guaranteed that the total sum of $Q$ doesn't exceed $10^5$.
+
+---
+
+% Output format
+
+For each testcase, please print the corresponding $b_i$ such that $a_i = Y$.
+
+---
+
+% Notes
+
+\begin{center}
+\textit{Treap is segment tree supporting interval moving}
+\end{center}
