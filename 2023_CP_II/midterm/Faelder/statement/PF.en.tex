@@ -1,0 +1,56 @@
+%!TEX root = problem.en.tex
+\gdef\thisproblemauthor{}
+\gdef\thisproblemdeveloper{}
+\gdef\thisproblemorigin{}
+\begin{problem}{Faelder}
+{}{}
+{please refer to DOM Judge}
+{please refer to DOM Judge}
+{}
+
+You have an $N\times M$ chess board and a kind of special chess piece called "faelder".
+
+The $(i, j)$ grid of the chess board is the intersection of the $i$-th row from the top and the $j$-th column from the right.
+
+Each grid of the chess board can be occupied by at most one faelder.
+
+However, if there's a faelder at $(i, j)$ and there's another faelder on $(i-2, j)$, $(i+2, j)$, $(i, j-2)$, or $(i,j+2)$, then they will attack each other, causing the chess board to explode.
+
+It is also reasonable that you don't want your chess board to explode.
+
+On the other hand, there are $c$ grids of your chess board already ocuppied by some rocks collected by your younger siblings.
+
+What's more, you can't put faelder at those $c$ grids since it will make your siblings cry and you will be punished by your parents, just because you're a little older.
+
+Fortunately, faelders won't attack the rocks since they're afraid of your siblings' tears, too. That is, one faelder only attacks other faelders.
+
+To prevent more grids from occupying by your siblings, you want to put as many faelders as possible on the chess board.
+
+What is the maximum number of faelders that can be placed on the chess board?
+
+\InputFile
+The first line of the input contains two integers $N, M$ --- the size of your chess board.
+
+The second line of the input contains an integer $c$ --- the number of grids occupied by your siblings' rocks.
+
+Each of the next $c$ lines contains two integers $x_i, y_i$ --- the grid $(x_i, y_i)$ is occupied.
+
+\begin{itemize}
+    \item $1 \leq N, M \leq 300$
+    \item $0 \leq c \leq N\times M$
+    \item $1 \leq x_i \leq N$
+    \item $1 \leq y_i \leq M$
+    \item The pairs $(x_i, y_i)$ are distinct.
+\end{itemize}
+
+\OutputFile
+The output should contain an integer representing the maximum number of faelders that can be placed on the chess board.
+
+\Examples
+
+\begin{example}
+\exmpfile{./probs/PF/0-01.in}{./probs/PF/0-01.out}%
+\exmpfile{./probs/PF/0-02.in}{./probs/PF/0-02.out}%
+\end{example}
+
+\end{problem}

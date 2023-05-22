@@ -1,0 +1,106 @@
+\documentclass[11pt,a4paper,oneside]{article}
+
+\usepackage[T2A]{fontenc}
+%\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{olymp}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color} % for colored text
+\usepackage{import} % for changing current dir
+\usepackage{epigraph}
+\usepackage{daytime} % for displaying version number and date
+\usepackage{wrapfig} % for having text alongside pictures
+\usepackage{verbatim}
+\usepackage{tikz}
+\usepackage{listings}
+\lstset{
+    language=C++, % choose the language of the code
+    basicstyle=\footnotesize\ttfamily, %\color{red},
+	keywordstyle=\color{blue}\ttfamily,
+    stringstyle=\color{red}\ttfamily,
+    commentstyle=\color{gray}\ttfamily,
+    extendedchars=false,
+    numbers=left, % where to put the line-numbers
+    numberstyle=\tiny, % the size of the fonts that are used for the line-numbers     
+    showspaces=false, % show spaces adding particular underscores
+    showstringspaces=false, % underline spaces within strings
+    showtabs=false, % show tabs within strings adding particular underscores
+    frame=single, % adds a frame around the code
+    tabsize=4, % sets default tabsize to 2 spaces
+    captionpos=b, % sets the caption-position to bottom
+    breaklines=true, % sets automatic line breaking
+    breakatwhitespace=false, 
+}
+\usepackage{xcolor}
+\let\latinencoding\relax
+\usepackage{fontspec}
+\usepackage{xeCJK}
+\usepackage{ruby}
+\usepackage{ulem}
+%\usepackage{minted}
+%%%%% Comment %%%%%
+% Becuse The package can set up different language versions,
+% you should add .en in the filename of all files in the folder.
+%%%%% End %%%%%
+\renewcommand{\rubysize}{0.6}
+\newcommand{\importproblem}[1]{\import{.}{#1.en.tex}}
+
+%\input{problem.inc.tex}
+
+% ===== I don't know what is this. =====
+%\renewcommand{\t}[1]{\ifmmode{\mathtt{#1}}\else{\texttt{#1}}\fi}
+
+% Treat all pictures as MPS (metapost) when using PDFLaTeX tool
+%\ifx\pdftexversion\undefined
+%\else
+%  \DeclareGraphicsRule{*}{eps}{*}{}
+%\fi
+
+% ===== End =====
+
+\contest
+{Competitive Programming Training (II) Midterm Exam}
+{Monday}
+{April 17, 2023}
+
+%\binoppenalty=10000
+%\relpenalty=10000
+%\exhyphenpenalty=10000
+% \setCJKmainfont{微軟正黑體}
+
+\begin{document}
+
+\raggedbottom
+
+% ===== Setting Environment =====
+% Display the author of the problem in the footer: Closed
+%\displayauthorinfootertrue
+
+% Display the author of the problem below the title: Open
+%\displayauthortrue
+
+% Display the developer of the problem below the title: Closed
+%\displaydevelopertrue
+
+% Display the origin of the problem below the title: Open
+%\displayorigintrue
+
+% Choose the revision format
+% 1: print("revision %s [DD.MM.YY HH:MM]", revision.temp);
+%\revision{{\input{revision.temp}}[\number\day.\number\month.\number\year\ \daytime]}
+% 2: print("revision on DD.MM.YY HH:MM");
+%\revision{on \number\day.\number\month.\number\year\ \daytime}
+
+% Display the revision of the DOCUMENT in the footer: Closed
+%\revisionsignaturetrue
+
+% Insert the blank pages
+\intentionallyblankpagestrue
+% Import the problem
+% \input{TITLE}
+\importproblem{PD}
+%\importproblem{SampleProb}
+
+\end{document}
