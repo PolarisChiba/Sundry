@@ -1,0 +1,24 @@
+@subtask samples
+manual sample1.in
+manual sample2.in
+
+@subtask full
+@include samples
+big 1
+big 2
+big 4
+big 8
+big 2048
+big 4096
+big 8192
+big 16384
+gen1 200000 199999
+gen1 180000 200000
+gen1 150000 200000
+gen1 100000 200000
+gen1 900 200000
+gen1 700 200000
+link 200000 199999
+link 180000 200000
+link 150000 200000
+link 100000 200000

@@ -1,0 +1,17 @@
+@subtask samples
+manual sample1.in
+manual sample2.in
+
+@subtask full
+@include samples
+manual n.in
+gen1 1
+gen1 2
+gen1 3
+gen1 4
+gen1 5
+gen1 6
+gen1 7
+gen1 8
+gen1 9
+gen1 10

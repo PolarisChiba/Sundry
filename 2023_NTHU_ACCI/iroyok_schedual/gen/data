@@ -1,0 +1,25 @@
+@subtask samples
+manual sample1.in
+manual sample2.in
+
+@subtask bruteforce
+manual N0b.in
+manual N0f.in
+gen1 3 3
+gen1 5 5
+gen1 1000 1000
+gen1 999 999
+gen1 998 998
+gen1 997 997
+gen1 996 996
+
+@subtask full
+@include samples
+@include bruteforce
+gen1 100000 100000
+gen1 100000 99999
+gen1 99999 100000
+gen1 99999 99999
+gen1 99999 99998
+gen1 99998 99999
+gen1 99998 99998

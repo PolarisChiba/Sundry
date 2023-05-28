@@ -1,0 +1,37 @@
+@subtask samples
+manual sample1.in
+manual sample2.in
+
+@subtask bruteforce
+manual Zero.in
+small1 100
+small1 99
+small1 98
+small1 97
+small1 96
+small1 95
+small2 100 10
+small2 100 100
+small2 100 1000
+small2 100 10000
+small2 100 200
+small2 100 20
+
+
+@subtask full
+@include samples
+@include bruteforce
+manual BigPrime.in
+gen1 100
+gen1 99
+gen1 98
+gen1 97
+gen1 96
+gen1 95
+gen2 100 10
+gen2 100 100
+gen2 100 1000
+gen2 100 10000
+gen2 100 200
+gen2 100 20
+gen3 100

@@ -1,0 +1,13 @@
+{
+    "name": "nihongo_benkyou",
+    "code": "nihongo_benkyou",
+    "title": "nihongo_benkyou",
+    "type": "Batch",
+    "has_grader": false,
+    "java_enabled": false,
+    "python_enabled": false,
+    "time_limit": 1.0,
+    "memory_limit": 2048,
+    "description": "Task description",
+    "has_checker": false
+}

@@ -1,0 +1,7 @@
+{
+    "correct1.cpp": { "verdict": "model_solution" },
+    "tle.cpp": {
+        "verdict": "time_limit",
+        "except": {"samples": "correct", "bruteforce": "correct"}
+    }
+}
