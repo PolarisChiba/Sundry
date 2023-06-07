@@ -1,0 +1,5 @@
+balance = int(input("How much money do you have? "))
+event = input("Add an expense or income record with description and amount:\n")
+event = event.split()
+balance = balance + int(event[-1])
+print("Now you have {} dollars.".format(balance))

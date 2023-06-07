@@ -1,0 +1,9 @@
+1000
+meal breakfast -50
+drink coffee -100
+food bread -80
+food sausage -40
+meal lunch -120
+transportation taxi -170
+bus 902 -20
+snack cake -35
