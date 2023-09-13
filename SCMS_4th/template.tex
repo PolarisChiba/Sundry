@@ -1,0 +1,122 @@
+%架構: 其他檔案放入documentclass，並input本template。請參考Museum/Adv-Example.tex
+%引入較多package，功能全面(但依賴的東西也比較多)
+%Template by Saintan
+
+%%%引入Package%%%
+%欲查詢各package詳細使用方法，參見https://ctan.org/pkg/<package名稱>
+%如https://ctan.org/pkg/ulem，並閱讀Package documentation
+    %% font & format %%
+\usepackage[margin=2cm]{geometry} % 上下左右距離邊緣2cm
+\usepackage{fontspec}   % 加這個就可以設定字體(我不會用)
+\usepackage{type1cm}	% 設定fontsize用(我不會用)
+\usepackage{titlesec}   % 設定section等的字體(我不會用)
+\usepackage{fancyhdr}   % 頁首頁尾
+\usepackage{multicol}   % 多欄 \multicols
+\usepackage{ulem}       % 字加裝飾 (underline+emphasis)(我不會用)
+    %% Math & graphics %%
+\usepackage{amsmath,amsthm,amssymb} % 引入 AMS 數學環境
+\usepackage{relsize}
+\usepackage{dsfont}
+\usepackage{mathtools}  % 新一代數學工具，修正一點amsmath的bug
+\usepackage{graphicx}   % 圖形插入用，\rotatebox等。
+\usepackage{yhmath}     % BIG math symbol，如matrix用的超大圓括弧、角括弧
+\usepackage{tikz-cd}    % 含tikz，可以多畫diagram類的東西
+    %% Enhancement %%
+\usepackage{titling}    % 加強 title 功能(我不會用)
+\usepackage{tabularx}   % 加強版 table(我不會用)
+\usepackage{enumerate}   % 加強版enumerate, itemize, list
+\usepackage[showzone=true, showseconds=true]{datetime2} %加強版時間格式
+\usepackage[square, comma, numbers, super, sort&compress]{natbib}  % cite加強版(我不會用)
+    %% Logos & symbols %%
+%\usepackage{textcomp}  % 可以打出許多好用的符號，Overleaf已預載
+\usepackage{academicons}% 可以打出arXiv, Academia, Overleaf等Logo 
+\usepackage{listings}
+
+\usepackage{wasysym}    % 可以打出各種怪符號如 \sun, \smiley, \eighthnote
+\usepackage{dsfont}     % 另一種雙標線字體 \mathds，多了\mathds{1 h k}
+\usepackage[scr]{rsfso} % 草寫字體 \mathscr，請只使用其中一個
+%\usepackage{BOONDOX-uprscr} % 另一個草寫字體 \mathscr，請只使用其中一個
+    %% Chinese/Japanese/Korean%%%
+\usepackage[CJKmath=true,AutoFakeBold=3,AutoFakeSlant=.2]{xeCJK}% XeLaTeX 中日韓
+\usepackage{CJKulem} %中日韓裝飾
+% \usepackage{setspace}
+\usepackage{minted}
+
+\setCJKmainfont{AR PL KaitiM Big5} %一般字體(\textrm)
+\setCJKsansfont{AR PL KaitiM Big5} %無襯線字體(\textrf)
+\setCJKmonofont{AR PL KaitiM Big5} %打字機字體(\texttt)
+\newCJKfontfamily\Kai{標楷體} 
+\newCJKfontfamily\Hei{微軟正黑體}
+\newCJKfontfamily\NewMing{新細明體}
+\XeTeXlinebreaklocale "zh"
+    %% Other package %%
+\usepackage{pgf}    %For random
+\usepackage[unicode=true, pdfborder={0 0 0}, bookmarksdepth=-1]{hyperref} % ref加強版，請儘量把hyperref放在最後一個引入的package
+
+\usepackage[autostyle]{csquotes}  
+
+%%%頁面設定%%%
+\setlength{\headheight}{15pt}  %with titling
+\setlength{\droptitle}{-1.5cm} %title 與上緣的間距
+\parindent=24pt %設定縮排的距離
+
+%%%證明、結論、定義等等的環境，derived from CKMSG%%%
+\newtheoremstyle{mystyle}% 自定義Style
+  {6pt}{15pt}%       上下間距
+  {}%               內文字體
+  {}%               縮排
+  {\bf}%            標頭字體
+  {.}%              標頭後標點
+  {1em}%            內文與標頭距離
+  {}%               Theorem head spec (can be left empty, meaning 'normal')
+
+% 改用粗體，預設 remark style 是斜體
+\theoremstyle{mystyle}	% 定理環境Style
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{df}[thm]{Definition}
+\newtheorem{ex}[thm]{Example}
+\newtheorem{exs}[thm]{Exercise}
+\newtheorem{cl}[thm]{Corollary}
+\newtheorem{pp}[thm]{Property}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lm}[thm]{Lemma}
+\newtheorem{pr}{Problem}
+\renewcommand{\proofname}{\bf Proof:\\} %修改Proof 標頭，Proof有內建
+\newtheorem*{rmk}{Remark}
+\newtheorem*{clm}{Claim}
+
+\newcommand{\resetcounters}
+    {
+    \setcounter{section}{0}
+    \setcounter{thm}{0}
+    }
+
+%%%重定義一些command%%%
+\newcommand{\st}{\mbox{ such that }}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\renewcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\DeclareMathOperator{\im}{Im}
+\DeclareMathOperator{\trace}{tr}
+\DeclareMathOperator{\vsspan}{span}
+\DeclareMathOperator{\image}{Im}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\adj}{adj}
+\DeclareMathOperator{\ch}{ch}
+
+\pagestyle{fancy}  % fancy: fancyhdr
+
+%use with fancyhdr
+\lhead{\leftmark}
+\chead{}
+\rhead{第四屆 全國高中數理科學競賽培訓營資訊組}
+\cfoot{}
+\rfoot{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+
+%%%\doublespacing
