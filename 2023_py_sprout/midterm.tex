@@ -1,0 +1,119 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{indentfirst}
+\usepackage{amssymb}
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{fancyhdr}
+\usepackage{xeCJK}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{ulem}
+\usepackage{xcolor}
+\usepackage{fancyvrb}
+\usepackage{listings}
+\usepackage{soul}
+\usepackage{hyperref}
+    \lstdefinestyle{C}{
+        language=C, 
+        basicstyle=\ttfamily\bfseries,
+        numbers=left, 
+        numbersep=5pt,
+        tabsize=4,
+        frame=single,
+        commentstyle=\itshape\color{brown},
+        keywordstyle=\bfseries\color{blue},
+        deletekeywords={define},
+        morekeywords={NULL,bool}
+    }   
+ 
+\setCJKmainfont{Noto Sans Mono CJK TC}
+ 
+\voffset -20pt
+\textwidth 410pt
+\textheight 650pt
+\oddsidemargin 20pt
+\newcommand{\XOR}{\otimes}
+\linespread{1.2}\selectfont
+ 
+\pagestyle{fancy}
+\lhead{2023 資訊之芽Python班階段考}
+ 
+\begin{document}
+ 
+\begin{center}
+\section*{Problem F. 線性遞迴}
+\end{center}
+ 
+\section*{Description}
+ 
+在此題中，我們稱呼線性遞迴是滿足以下條件的數列：
+
+$$
+F_i=\begin{cases}
+1 & \text{If } 1\le i \le m \\
+a_1\times F_{i-1} + a_2\times F_{i-2}+\cdots + a_m\times F_{i-m} & \text{Otherwise}
+\end{cases}
+$$
+
+舉例來說，對於費氏數列來說，就是 $m=2$、$a_1 = a_2 = 1$ 的線性遞迴數列。
+
+現在給你 $a_1\sim a_m$，還有一個正整數 $n$，請計算 $F_n$。
+ 
+\section*{Input}
+ 
+輸入包含兩行。
+
+第一行會有一個數列，代表 $a_1, a_2, \cdots, a_m$。
+
+保證此數列長度 $\le 5$、並且 $0\le a_i\le 10$。
+
+第二行會有一個正整數，代表 $n$，保證 $1\le n\le 20$。
+ 
+\section*{Output}
+ 
+請輸出 $F_n$。
+
+\section*{Sample 1}
+\begin{longtable}[!h]{|p{0.5\textwidth}|p{0.5\textwidth}|}
+\hline
+\textbf {Input} & \textbf {Output} \\
+\hline
+\parbox[t]{0.5\textwidth}
+{ \tt
+% input
+1 1\\
+21\\
+ 
+} &
+\parbox[t]{0.5\textwidth}
+{ \tt
+%output
+21\\
+
+} \\
+\hline
+\end{longtable}
+
+\section*{Sample 2}
+\begin{longtable}[!h]{|p{0.5\textwidth}|p{0.5\textwidth}|}
+\hline
+\textbf {Input} & \textbf {Output} \\
+\hline
+\parbox[t]{0.5\textwidth}
+{ \tt
+% input
+1 2 3\\
+10\\
+
+} &
+\parbox[t]{0.5\textwidth}
+{ \tt
+%output
+861\\
+
+} \\
+\hline
+\end{longtable}
+ 
+\end{document}
